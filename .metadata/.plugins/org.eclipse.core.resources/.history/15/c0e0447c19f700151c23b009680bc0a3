@@ -1,0 +1,17 @@
+package main;
+
+public class main {
+
+
+	public static void main(String[] args){
+
+		System.out.println("メインですよテストですよ");
+
+
+
+	}
+
+	private void methodOne(){
+		System.out.println("methodOne");
+	}
+}

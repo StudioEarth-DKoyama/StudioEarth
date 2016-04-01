@@ -1,0 +1,20 @@
+package main;
+
+import org.eclipse.jdt.internal.compiler.batch.Main;
+
+public class Main {
+
+
+	public static void main(String[] args){
+
+		System.out.println("メインですよテストですよ");
+
+		Main auau = new Main();
+		auau.MethodOne();
+
+	}
+
+	void MethodOne(){
+		System.out.println("methodOne");
+	}
+}
