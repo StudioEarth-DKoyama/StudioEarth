@@ -10,14 +10,9 @@ public class Main {
 		Main auau = new Main();
 		System.out.println(auau.MethodOne());
 
-		ClassOne class1 = new ClassOne();
-
-		System.out.println(class1.ClassOneMethodOne());
-
 	}
 
 	String MethodOne(){
 		return "methodOne";
 	}
-
 }
