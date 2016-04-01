@@ -1,6 +1,5 @@
 INDEX VERSION 1.127+C:\Users\t_koyamadc\Documents\Studio_Earth\.metadata\.plugins\org.eclipse.jdt.core
 1285418619.index
-1688339054.index
 332767137.index
 1719924856.index
 3548799211.index
