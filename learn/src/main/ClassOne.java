@@ -3,13 +3,10 @@ package main;
 public class ClassOne {
 
 	public String ClassOneMethodOne(){
-<<<<<<< HEAD
 
-		//confrict_test
-=======
-		
-		System.out.println("‹£‡ƒeƒXƒg");
->>>>>>> origin/master
+
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½eï¿½Xï¿½g");
+
 		return "ClassOneMethodOne";
 	}
 }
