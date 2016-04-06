@@ -1,0 +1,157 @@
+package uriage;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import uriageEntity.Branch;
+import uriageEntity.Commodity;
+
+/**
+ *ファイル操作を扱うクラス
+ *@author t_koyamadc
+ */
+class ReadFile {
+
+	private String commonPath = "C:\\Users\\t_koyamadc\\Documents\\uriageData";
+	private String braPath = commonPath + "‪\\branch.lst";
+	private String comPath = commonPath + "\\commodity.lst";
+
+	private String branch= "支店定義";
+	private String commodity = "商品定義";
+
+	/**
+	 * ファイルの存在チェック
+	 * */
+	public void checkFile() {
+
+		List<String> errMsgLst = new ArrayList<String>();
+
+		File braFile = new File(commonPath + braPath);
+
+		if(!(braFile.exists())) {
+			errMsgLst.add("支店定義ファイルがありません。");
+		}
+
+		File comFile = new File(commonPath + comPath);
+
+		if(!(comFile.exists())) {
+			errMsgLst.add("商品定義ファイルがありません。");
+		}
+
+		if (errMsgLst.size() != 0) {
+
+			for (String eml : errMsgLst) {
+				System.out.println(eml);
+			}
+
+			System.out.println("処理を終了します");
+			System.exit(0);
+
+		}
+	}
+
+	/**
+	 * branchファイルを処理
+	 **/
+	public List<Branch> readBranch() {
+
+		//ファイルを読み込む
+		File file = new File(commonPath + braPath);
+		if (file.exists()){
+
+			List<Branch> braList = new ArrayList<Branch>();
+
+		    try {
+		        //ファイルを読み込む
+		        FileReader fr = new FileReader(file.toString());
+		        BufferedReader br = new BufferedReader(fr);
+
+		        //1行ずつ読みこんで格納
+		        String line;
+
+		        while ((line = br.readLine()) != null) {
+
+		        	String[] cols = line.split(",", -1);
+	        		//Branchエンティティに格納
+	        		Branch bra = new Branch();
+	        		bra.setBranchName(cols[0]);
+	        		bra.setBranchName(cols[1]);
+
+	        		braList.add(bra);
+
+		        }
+
+		        //終了処理
+		        br.close();
+		        fr.close();
+
+		    } catch (IOException ex) {
+		        //例外発生時処理
+		        System.out.println(ex);
+		    }
+
+			return braList;
+
+		}else{
+			//処理終了
+		    System.out.println(branch + "ファイルが存在しません");
+
+		}
+	}
+
+	/**
+	 * commodityファイルを処理
+	 **/
+	private void readFile(String path, String kind){
+
+	    try {
+	        //ファイルを読み込む
+	        FileReader fr = new FileReader(path);
+	        BufferedReader br = new BufferedReader(fr);
+
+	        //1行ずつ読みこんで格納
+	        String line;
+	        int count = 0;
+	        while ((line = br.readLine()) != null) {
+
+	        	String[] cols = line.split(",", -1);
+
+	        	//バリデーションチェックを行いエンティティにセット
+	        	if (branch.equals(kind)) {
+
+	        		//Branchエンティティに格納
+	        		Branch bra = new Branch();
+	        		bra.setBranchName(cols[0]);
+	        		bra.setBranchName(cols[1]);
+
+
+	        		braList.add(bra);
+
+	        	} else if (commodity.equals(kind)) {
+
+	        		//Commodityエンティティに格納
+	        		Commodity com = new Commodity();
+	        		com.setCommodityNumber(cols[0]);
+	        		com.setCommodityNumber(cols[1]);
+
+	        		List<Commodity> comList = new ArrayList<Commodity>();
+	        		comList.add(com);
+
+	        	}
+
+	        }
+
+	        //終了処理
+	        br.close();
+	        fr.close();
+
+	    } catch (IOException ex) {
+	        //例外発生時処理
+	        System.out.println(ex);
+	    }
+	}
+}

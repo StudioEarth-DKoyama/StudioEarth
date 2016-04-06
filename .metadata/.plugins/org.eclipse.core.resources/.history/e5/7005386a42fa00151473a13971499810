@@ -1,0 +1,36 @@
+package uriage;
+
+import java.io.File;
+import java.util.List;
+
+import uriageEntity.Branch;
+import uriageEntity.Commodity;
+
+public class Calculate {
+
+	/**
+	 * 売上ファイルを読み込み、エンティティにセットする。
+	 **/
+	public void calculate(List<Branch> braList, List<Commodity> comList) {
+
+		//売上ファイルを読み込み、支店別、商品別に集計を行っていく。
+
+
+	}
+
+	private void checkRecord() {
+
+		File braFile = new File(commonPath + braPath);
+
+
+
+	}
+
+    public boolean accept(File dir, String name){
+        File file = new File(name);
+        if(file.isDirectory()){
+            return false;
+        }
+        return(name.endsWith(".rcd"));
+    }
+}

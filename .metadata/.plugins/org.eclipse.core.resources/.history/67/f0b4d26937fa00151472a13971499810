@@ -1,0 +1,7 @@
+package uriageEntity;
+
+abstract public class AbstractUriage {
+
+	public String result;
+
+}

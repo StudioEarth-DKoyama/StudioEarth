@@ -1,0 +1,15 @@
+package uriageEntity;
+
+public class Branch extends AbstractUriage {
+
+	String branchName;
+
+	public String getBranchName() {
+	    return branchName;
+	}
+
+	public void setBranchName(String branchName) {
+	    this.branchName = branchName;
+	}
+
+}

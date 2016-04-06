@@ -1,0 +1,71 @@
+package uriage;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+
+import uriageEntity.Branch;
+import uriageEntity.Commodity;
+
+public class Calculate {
+
+	/**
+	 * 売上ファイルを読み込み、エンティティにセットする。
+	 **/
+	public void calculate(List<Branch> braList, List<Commodity> comList) {
+
+		//まずチェック
+		checkRecord();
+
+
+		//売上ファイルを読み込み、支店別、商品別に集計を行っていく。
+
+
+	}
+
+	private List<String> checkRecord() {
+
+        //ファイル名の一覧を取得する
+        File file = new File("C:\\test");
+        File files[] = file.listFiles();
+
+        List<String> rcdList = new ArrayList<String>();
+
+        //取得した一覧を表示する
+        for (int i=0; i<files.length; i++) {
+            if (accept(dirPath, files[i])) {
+            	rcdList.add(files[i].toString());
+            }
+        }
+
+        if (rcdList.size() == 0) {
+        	System.out.println("売上データが存在しません。");
+        	System.exit(0);
+        }
+
+        return rcdList;
+
+	}
+
+	/**
+	 * ファイル名がrcdならturueをリターンそれ以外はfalseをリターン
+	 *
+	 * @return 拡張子が.rcd：true
+	 * @return 拡張子が.rcd以外:false
+	 * */
+	public boolean accept(File dir, String name) {
+		//拡張子の"."を探す
+	    int index = name.lastIndexOf(".");
+
+	    //"."以下の文字列を取り出して全て小文字に
+	    String ext = name.substring(index+1).toLowerCase();
+
+	    //拡張子が"txt"と一致すれば取り出す
+	    if(ext.equals("rcd") == true) {return true;}
+
+	    //それ以外のファイルはリストアップしない
+	    return false;
+	}
+
+
+}

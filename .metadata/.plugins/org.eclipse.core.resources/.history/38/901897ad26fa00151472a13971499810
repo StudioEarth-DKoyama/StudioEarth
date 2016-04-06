@@ -1,0 +1,14 @@
+package main;
+
+public class ClassOne {
+
+	public String ClassOneMethodOne(){
+
+
+		int i = 0;
+		Integer g = i;
+		System.out.println(g);
+
+		return "ClassOneMethodOne";
+	}
+}

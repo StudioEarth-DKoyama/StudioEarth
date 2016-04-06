@@ -1,0 +1,33 @@
+package uriage;
+
+import java.util.List;
+
+public class Main {
+	public static void main(String[] args) {
+
+		//同一ディレクトリ内部に格納されているuriageファイル、商品定義ファイルを読む
+
+		ReadFile rf = new ReadFile();
+		List<String> errMsgList = rf.checkFile();
+
+		//ファイルの存在チェックを行う
+		if (errMsgList.size() != 0) {
+
+			for (String eml : errMsgList) {
+				System.out.println(eml);
+			}
+
+			System.out.println("処理を終了します");
+			System.exit(0);
+
+		}
+
+		//商品定義ファイルを読み込む
+
+
+
+		//データベースへ登録を行う
+
+	}
+
+}

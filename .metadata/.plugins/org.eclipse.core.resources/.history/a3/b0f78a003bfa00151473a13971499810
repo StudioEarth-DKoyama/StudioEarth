@@ -1,0 +1,20 @@
+package uriage;
+
+
+public class Main {
+	public static void main(String[] args) {
+
+		ReadFile rf = new ReadFile();
+
+		//ファイルの存在チェック
+		rf.checkFile();
+
+		//商品定義ファイルを読み込む
+		//rf.
+
+
+		//データベースへ登録を行う
+
+	}
+
+}

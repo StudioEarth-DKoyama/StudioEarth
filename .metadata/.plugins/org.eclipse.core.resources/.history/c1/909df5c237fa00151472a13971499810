@@ -1,0 +1,9 @@
+package uriageEntity;
+
+public class Commodity extends AbstractUriage {
+
+	String commodityNumber;
+	String commodityName;
+
+
+}

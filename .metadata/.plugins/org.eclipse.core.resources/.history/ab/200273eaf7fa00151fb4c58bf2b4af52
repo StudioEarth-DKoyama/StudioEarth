@@ -1,0 +1,24 @@
+package uriage;
+
+import java.util.List;
+
+import uriageEntity.Branch;
+import uriageEntity.Commodity;
+
+public class Calculate {
+
+	/**
+	 * 売上ファイルを読み込み、エンティティにセットする。
+	 **/
+	public void calculate(List<Branch> braList, List<Commodity> comList, List<String> rcdList) {
+
+		//支店別に集計
+		for (String string : rcdList) {
+			
+		}
+
+		//商品別に集計
+
+	}
+
+}

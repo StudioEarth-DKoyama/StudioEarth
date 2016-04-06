@@ -1,0 +1,12 @@
+package uriage;
+
+public class main {
+	public static void main(String[] args) {
+		
+		//同一ディレクトリ内部に格納されているuriageファイル、商品定義ファイルを読む
+		
+		//データベースへ登録を行う
+		
+	}
+
+}

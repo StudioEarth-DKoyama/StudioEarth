@@ -1,0 +1,32 @@
+package uriage;
+
+import java.io.File;
+
+class ReadFile {
+
+	String braPath = "";
+	String comPath = "";
+
+	void readFile(){
+
+		//branchファイルを読み込む
+		read(braPath);
+		//commodityファイルを読み込む
+		read(comPath);
+
+
+	}
+
+	private void read(String path){
+
+		//ファイルを読み込む
+		File file = new File(path);
+		if (file.exists()){
+		    System.out.println("ファイルは存在します");
+		}else{
+		    System.out.println("ファイルは存在しません");
+		}
+
+	}
+
+}

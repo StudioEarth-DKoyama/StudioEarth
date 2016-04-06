@@ -1,0 +1,30 @@
+package uriageEntity;
+
+public class Record {
+
+	String branch;
+	String commodity;
+	String result;
+
+
+	public String getBranch() {
+		return branch;
+	}
+	public void setBranch(String branch) {
+		this.branch = branch;
+	}
+	public String getCommodity() {
+		return commodity;
+	}
+	public void setCommodity(String commodity) {
+		this.commodity = commodity;
+	}
+	public String getResult() {
+		return result;
+	}
+	public void setResult(String result) {
+		this.result = result;
+	}
+
+
+}

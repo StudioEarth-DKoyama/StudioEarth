@@ -5,7 +5,9 @@ public class ClassOne {
 	public String ClassOneMethodOne(){
 
 
-		System.out.println("�����e�X�g");
+		int i = null;
+		Integer g = i;
+		System.out.println(g);
 
 		return "ClassOneMethodOne";
 	}

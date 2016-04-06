@@ -1,0 +1,23 @@
+package uriageEntity;
+
+abstract public class AbstractUriage {
+
+	public String result;
+
+	/**
+	 * resultを取得します。
+	 * @return result
+	 */
+	public String getResult() {
+	    return result;
+	}
+
+	/**
+	 * resultを設定します。
+	 * @param result result
+	 */
+	public void setResult(String result) {
+	    this.result = result;
+	}
+
+}

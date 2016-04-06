@@ -1,0 +1,23 @@
+package uriageEntity;
+
+public class Branch {
+
+	public String branchName;
+
+	/**
+	 * branchNameを取得します。
+	 * @return branchName
+	 */
+	public String getBranchName() {
+	    return branchName;
+	}
+
+	/**
+	 * branchNameを設定します。
+	 * @param branchName branchName
+	 */
+	public void setBranchName(String branchName) {
+	    this.branchName = branchName;
+	}
+
+}

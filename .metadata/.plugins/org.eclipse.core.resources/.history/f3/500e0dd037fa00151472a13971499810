@@ -1,0 +1,37 @@
+package uriageEntity;
+
+public class Commodity extends AbstractUriage {
+
+	String commodityNumber;
+	String commodityName;
+	/**
+	 * commodityNumberを取得します。
+	 * @return commodityNumber
+	 */
+	public String getCommodityNumber() {
+	    return commodityNumber;
+	}
+	/**
+	 * commodityNumberを設定します。
+	 * @param commodityNumber commodityNumber
+	 */
+	public void setCommodityNumber(String commodityNumber) {
+	    this.commodityNumber = commodityNumber;
+	}
+	/**
+	 * commodityNameを取得します。
+	 * @return commodityName
+	 */
+	public String getCommodityName() {
+	    return commodityName;
+	}
+	/**
+	 * commodityNameを設定します。
+	 * @param commodityName commodityName
+	 */
+	public void setCommodityName(String commodityName) {
+	    this.commodityName = commodityName;
+	}
+
+
+}

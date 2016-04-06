@@ -1,0 +1,32 @@
+package uriageEntity;
+
+public class Branch extends AbstractUriage {
+
+	String branchNumber;
+	String branchName;
+
+	/**
+	 * branchNumberを取得します。
+	 * @return branchNumber
+	 */
+	public String getBranchNumber() {
+	    return branchNumber;
+	}
+
+	/**
+	 * branchNumberを設定します。
+	 * @param branchNumber branchNumber
+	 */
+	public void setBranchNumber(String branchNumber) {
+	    this.branchNumber = branchNumber;
+	}
+
+	public String getBranchName() {
+	    return branchName;
+	}
+
+	public void setBranchName(String branchName) {
+	    this.branchName = branchName;
+	}
+
+}

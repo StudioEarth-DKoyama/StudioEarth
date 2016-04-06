@@ -1,0 +1,9 @@
+package uriageEntity;
+
+public class Branch {
+
+	String branchName;
+	
+	String branch
+	
+}
